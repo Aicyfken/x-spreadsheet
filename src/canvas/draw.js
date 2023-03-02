@@ -126,7 +126,7 @@ function drawFontLine(type, tx, ty, align, valign, blheight, blwidth) {
   }
   this.line(
     [tx - floffset.x, ty - floffset.y],
-    [tx - floffset.x + blwidth, ty - floffset.y],
+    [tx - floffset.x + blwidth/3*2, ty - floffset.y],
   );
 }
 
