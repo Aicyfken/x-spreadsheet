@@ -128,7 +128,7 @@ function drawFontLine(type, tx, ty, align, valign, blheight, blwidth) {
     [tx - floffset.x, ty - floffset.y],
     [tx - floffset.x + blwidth/3*2, ty - floffset.y],
   );
-  console.log("ycoord: ", tx - floffset.x + blwidth/3*2);
+  console.log("ori: ", tx - floffset.x + blwidth, "ycoord: ", tx - floffset.x + blwidth/3*2);
 }
 
 class Draw {
