@@ -126,9 +126,8 @@ function drawFontLine(type, tx, ty, align, valign, blheight, blwidth) {
   }
   this.line(
     [tx - floffset.x, ty - floffset.y],
-    [tx - floffset.x + blwidth/3*2, ty - floffset.y],
+    [tx - floffset.x + blwidth, ty - floffset.y],
   );
-  console.log("ori: ", tx - floffset.x + blwidth, "ycoord: ", tx - floffset.x + blwidth/3*2);
 }
 
 class Draw {
@@ -274,7 +273,7 @@ class Draw {
     const txtHeight = (ntxts.length - 1) * (font.size + 2);
     let ty = box.texty(valign, txtHeight);
     ntxts.forEach((txt) => {
-      const txtWidth = ctx.measureText(txt).width;
+      const txtWidth = ctx.measureText(txt).width/2;
       this.fillText(txt, tx, ty);
       if (strike) {
         drawFontLine.call(this, 'strike', tx, ty, align, valign, font.size, txtWidth);
