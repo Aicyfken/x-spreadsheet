@@ -274,6 +274,7 @@ class Draw {
     let ty = box.texty(valign, txtHeight);
     ntxts.forEach((txt) => {
       const txtWidth = ctx.measureText(txt).width*0.67;
+      console.log("width: ", ctx.measureText(txt).width);
       this.fillText(txt, tx, ty);
       if (strike) {
         drawFontLine.call(this, 'strike', tx, ty, align, valign, font.size, txtWidth);
