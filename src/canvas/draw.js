@@ -273,7 +273,7 @@ class Draw {
     const txtHeight = (ntxts.length - 1) * (font.size + 2);
     let ty = box.texty(valign, txtHeight);
     ntxts.forEach((txt) => {
-      const txtWidth = ctx.measureText(txt).width*0.6;
+      const txtWidth = ctx.measureText(txt).width*0.61;
       console.log("width: ", ctx.measureText(txt).width);
       this.fillText(txt, tx, ty);
       if (strike) {
